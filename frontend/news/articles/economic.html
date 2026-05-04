@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Economic — News — The World</title>
+    <meta
+      name="description"
+      content="Economic articles from The World — markets, growth, money."
+    />
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+  </head>
+  <body data-nav="news">
+    <div id="site-header"></div>
+
+    <main id="main" class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">News</a>
+        <span class="sep">/</span>
+        <a href="index.html">Articles</a>
+        <span class="sep">/</span>
+        <span aria-current="page">Economic</span>
+      </nav>
+
+      <header class="page-header">
+        <p class="eyebrow">Articles · Economic</p>
+        <h1>Markets, growth, and money.</h1>
+        <p class="lede">
+          Coverage of macroeconomic shifts, corporate earnings, and the
+          decisions that move capital around the world.
+        </p>
+      </header>
+
+      <section class="section" aria-labelledby="story-now">
+        <div class="section-heading">
+          <h2 id="story-now">The story right now</h2>
+          <span class="label">On the Economic desk</span>
+        </div>
+        <div id="economy-report"></div>
+        <script>
+          fetch("../../../articles/economy/report.html")
+            .then(r => r.text())
+            .then(html => {
+              document.getElementById("economy-report").innerHTML = html;
+            });
+        </script>
+    <script src="../../assets/js/components.js"></script>
+  </body>
+</html>
